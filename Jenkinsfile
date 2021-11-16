@@ -2,7 +2,6 @@ pipeline {
     agent {
         docker {
             image 'pramitsawant11/node-14.17.3-git:latest'
-            args '-p 3000:3000 -p 5000:5000'
         }
     }
     environment {
