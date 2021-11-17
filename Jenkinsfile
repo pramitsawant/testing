@@ -1,17 +1,9 @@
 pipeline {
-    agent {
-        docker {
-            image 'pramitsawant11/node-14.17.3-git:latest'
-        }
-    }
+    agent any
     environment {
         CI = 'true'
     }
-    stages {
-        // stage('Initialize'){
-        //         def dockerHome = tool 'myDocker'
-        //         env.PATH = "${dockerHome}/bin:${env.PATH}"
-        // }        
+    stages {     
         stage('Build') {
             steps {
                 sh 'yarn install'
